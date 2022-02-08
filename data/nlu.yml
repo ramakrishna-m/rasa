@@ -28,15 +28,15 @@ nlu:
 
 - intent: pizza_size
   examples: |
-    - i need small pizza
-    - i need medium pizza
-    - i need large pizza
-    - large pizza
-    - small pizza
-    - medium pizza
-    - i want small pizza
-    - i want medium pizza
-    - i want large pizza
+    - i need [small](size) pizza
+    - i need [medium](size) pizza
+    - i need [large](size) pizza
+    - [large](size) pizza
+    - [small](size) pizza
+    - [medium](size) pizza
+    - i want [small](size) pizza
+    - i want [medium](size) pizza
+    - i want [large](size) pizza
 
 - intent: pizza_toppings
   examples: |

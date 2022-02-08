@@ -30,15 +30,15 @@ class ActionPizzaOrder(Action):
 	def name(self) -> Text:
 		return "action_pizza_cost"
 
-
-
 	def submit(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict]:
-		pizza_size = tracker.get_slot("pizza_size")
-		pizza_type = tracker.get_slot("pizza_type")
-		pizza_amount = 100
-		
-		dispatcher.utter_message(text='Okay. Your order cost is {}'.format(pizza_amount))
+		data = {'small':50,'medium':100,'large':150}
+		entities = tracker.latest_message['entities']
+		for en in entities:
+			if en['entity'] == 'size':
+				size = en['value']
+		cost = data.get(size,0)
+		dispatcher.utter_message(text='Okay. Your order cost is {}'.format(cost))
 		return []
 
