@@ -40,13 +40,31 @@ nlu:
 
 - intent: pizza_toppings
   examples: |
-    - tomato
-    - paneer
-    - onions
-    - Perreroni
-    - olives
-    - cheeze
-    - Corn
+    - i need [small](size) pizza with [tomato](topping)
+    - i need [small](size) pizza with [paneer](topping)
+    - i need [small](size) pizza with [onions](topping)
+    - i need [small](size) pizza with [Perreroni](topping)
+    - i need [medium](size) pizza with [tomato](topping)
+    - i need [medium](size) pizza with [paneer](topping)
+    - i need [medium](size) pizza with [onions](topping)
+    - i need [medium](size) pizza with [Perreroni](topping)
+    - i need [large](size) pizza with [tomato](topping)
+    - i need [large](size) pizza with [paneer](topping)
+    - i need [large](size) pizza with [onions](topping)
+    - i need [large](size) pizza with [Perreroni](topping)
+    - [large](size) pizza
+    - [small](size) pizza
+    - [medium](size) pizza
+    - i want [small](size) pizza
+    - i want [medium](size) pizza
+    - i want [large](size) pizza
+    - [tomato](topping)
+    - [paneer](topping)
+    - [onions](topping)
+    - [Perreroni](topping)
+    - [olives](topping)
+    - [cheeze](topping)
+    - [Corn](topping)
 
 
 - intent: goodbye

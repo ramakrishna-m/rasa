@@ -1,6 +1,0 @@
-[
-  {
-    "name": "pizza_size",
-    "pattern": "(\\bSmall\\b|\\bMedium\\b|\\bLarge\\b)"
-  }
-]

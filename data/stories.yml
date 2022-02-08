@@ -25,6 +25,33 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
+
+- story: ordering a pizza
+  steps:
+  - intent: pizza_request
+  - action: utter_pizza_request
+  - intent: pizza_size
+  - action: utter_pizza_size
+  - intent: pizza_toppings
+  - action: action_pizza_cost
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: ordering a pizza with size
+  steps:
+  - intent: pizza_size
+  - action: utter_pizza_size
+  - intent: pizza_toppings
+  - action: action_pizza_cost
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
 - story: sad path 1
   steps:
   - intent: greet

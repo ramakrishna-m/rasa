@@ -25,20 +25,27 @@ from rasa_sdk.executor import CollectingDispatcher
 #
 #         return []
 
-class ActionPizzaOrder(Action):
+class ActionPizzaCost(Action):
 
 	def name(self) -> Text:
 		return "action_pizza_cost"
 
-	def submit(self, dispatcher: CollectingDispatcher,
+	def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict]:
-		data = {'small':50,'medium':100,'large':150}
+		pizza_data = {'small':50,'medium':100,'large':150}
+		topping_data = {'tomato':50,'paneer':50,'onions':50,'Perreroni':50,'olives':50,'cheeze':50,'Corn':50}
+		size,topping = '',''
 		entities = tracker.latest_message['entities']
 		for en in entities:
 			if en['entity'] == 'size':
 				size = en['value']
-		cost = data.get(size,0)
-		dispatcher.utter_message(text='Okay. Your order cost is {}'.format(cost))
+			if en['entity'] == 'topping':
+				topping = en['value']
+		print(entities)
+		pizza_cost = pizza_data.get(size,0)
+		topping_cost = topping_data.get(topping,0)
+		total_cost=pizza_cost+topping_cost
+		dispatcher.utter_message(text='Okay. Your order cost is {}'.format(total_cost))
 		return []
 
