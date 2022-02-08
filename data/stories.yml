@@ -18,8 +18,7 @@ stories:
   - intent: pizza_size
   - action: utter_pizza_size
   - intent: pizza_toppings
-  - action: utter_pizza_toppings
- 
+  - action: action_pizza_cost
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help

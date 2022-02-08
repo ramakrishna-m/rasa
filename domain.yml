@@ -11,6 +11,9 @@ intents:
   - pizza_request
   - pizza_size
   - pizza_toppings
+ 
+actions:
+  - action_pizza_cost
 
 responses:
   utter_greet:
@@ -38,8 +41,6 @@ responses:
   utter_pizza_size:
   - text: "what type of toppings you want?"
 
-  utter_pizza_toppings:
-  - text: "ok we will process your order"
  
 
 

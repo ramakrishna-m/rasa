@@ -28,7 +28,7 @@ from rasa_sdk.executor import CollectingDispatcher
 class ActionPizzaOrder(Action):
 
 	def name(self) -> Text:
-		return "action_item_cost"
+		return "action_pizza_cost"
 
 
 
